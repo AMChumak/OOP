@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/introlab.dir/main.cpp.o -o introlab 
