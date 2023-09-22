@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build",
+  "command": "/usr/bin/g++  -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=gnu++14 -o CMakeFiles/hello_test.dir/hello_test.cc.o -c /home/anton/Документы/OOP/chumak_lab_1/hello_test.cc",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/hello_test.cc",
+  "output": "CMakeFiles/hello_test.dir/hello_test.cc.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/circular_buffer.dir/circular_buffer.cpp.o -c /home/anton/Документы/OOP/chumak_lab_1/circular_buffer.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/circular_buffer.cpp",
+  "output": "CMakeFiles/circular_buffer.dir/circular_buffer.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++  -I/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock/include -I/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=c++14 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++  -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=c++14 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++  -I/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -I/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=c++14 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++  -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=c++14 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]
