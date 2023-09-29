@@ -26,8 +26,7 @@
 /home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/ContinuousCoverage.dir
 /home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/ContinuousMemCheck.dir
 /home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/ContinuousSubmit.dir
-/home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/hello_test.dir
-/home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/circular_buffer.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/circular_buffer_1.dir
 /home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/package.dir
 /home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/package_source.dir
 /home/anton/Документы/OOP/chumak_lab_1/build/CMakeFiles/test.dir
@@ -68,3 +67,13 @@
 /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googletest/CMakeFiles/install.dir
 /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googletest/CMakeFiles/install/local.dir
 /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googletest/CMakeFiles/install/strip.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/circular_buffer_t.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/package.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/package_source.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/test.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/edit_cache.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/rebuild_cache.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/list_install_components.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/install.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/install/local.dir
+/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/CMakeFiles/install/strip.dir

@@ -1,15 +1,9 @@
 [
 {
   "directory": "/home/anton/Документы/OOP/chumak_lab_1/build",
-  "command": "/usr/bin/g++  -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=gnu++14 -o CMakeFiles/hello_test.dir/hello_test.cc.o -c /home/anton/Документы/OOP/chumak_lab_1/hello_test.cc",
-  "file": "/home/anton/Документы/OOP/chumak_lab_1/hello_test.cc",
-  "output": "CMakeFiles/hello_test.dir/hello_test.cc.o"
-},
-{
-  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/circular_buffer.dir/circular_buffer.cpp.o -c /home/anton/Документы/OOP/chumak_lab_1/circular_buffer.cpp",
-  "file": "/home/anton/Документы/OOP/chumak_lab_1/circular_buffer.cpp",
-  "output": "CMakeFiles/circular_buffer.dir/circular_buffer.cpp.o"
+  "command": "/usr/bin/g++  -I/home/anton/Документы/OOP/chumak_lab_1/circular_buffer -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=gnu++14 -o CMakeFiles/circular_buffer_1.dir/tests.cpp.o -c /home/anton/Документы/OOP/chumak_lab_1/tests.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/tests.cpp",
+  "output": "CMakeFiles/circular_buffer_1.dir/tests.cpp.o"
 },
 {
   "directory": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/googlemock",
@@ -34,5 +28,11 @@
   "command": "/usr/bin/g++  -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/include -isystem /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest -g -std=c++14 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
   "file": "/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
   "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/circular_buffer_t.dir/circular_buffer.cpp.o -c /home/anton/Документы/OOP/chumak_lab_1/circular_buffer/circular_buffer.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_1/circular_buffer/circular_buffer.cpp",
+  "output": "circular_buffer/CMakeFiles/circular_buffer_t.dir/circular_buffer.cpp.o"
 }
 ]

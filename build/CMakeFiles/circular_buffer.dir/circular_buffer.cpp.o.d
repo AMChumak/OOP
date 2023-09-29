@@ -1,7 +1,8 @@
 CMakeFiles/circular_buffer.dir/circular_buffer.cpp.o: \
  /home/anton/Документы/OOP/chumak_lab_1/circular_buffer.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+ /usr/include/stdc-predef.h \
+ /home/anton/Документы/OOP/chumak_lab_1/circular_buffer.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h \

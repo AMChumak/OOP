@@ -556,30 +556,17 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
-# Target rules for targets named hello_test
+# Target rules for targets named circular_buffer_1
 
 # Build rule for target.
-hello_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_test
-.PHONY : hello_test
+circular_buffer_1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 circular_buffer_1
+.PHONY : circular_buffer_1
 
 # fast build rule for target.
-hello_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/build
-.PHONY : hello_test/fast
-
-#=============================================================================
-# Target rules for targets named circular_buffer
-
-# Build rule for target.
-circular_buffer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 circular_buffer
-.PHONY : circular_buffer
-
-# fast build rule for target.
-circular_buffer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer.dir/build.make CMakeFiles/circular_buffer.dir/build
-.PHONY : circular_buffer/fast
+circular_buffer_1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer_1.dir/build.make CMakeFiles/circular_buffer_1.dir/build
+.PHONY : circular_buffer_1/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -633,53 +620,42 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-circular_buffer.o: circular_buffer.cpp.o
-.PHONY : circular_buffer.o
+#=============================================================================
+# Target rules for targets named circular_buffer_t
+
+# Build rule for target.
+circular_buffer_t: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 circular_buffer_t
+.PHONY : circular_buffer_t
+
+# fast build rule for target.
+circular_buffer_t/fast:
+	$(MAKE) $(MAKESILENT) -f circular_buffer/CMakeFiles/circular_buffer_t.dir/build.make circular_buffer/CMakeFiles/circular_buffer_t.dir/build
+.PHONY : circular_buffer_t/fast
+
+tests.o: tests.cpp.o
+.PHONY : tests.o
 
 # target to build an object file
-circular_buffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer.dir/build.make CMakeFiles/circular_buffer.dir/circular_buffer.cpp.o
-.PHONY : circular_buffer.cpp.o
+tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer_1.dir/build.make CMakeFiles/circular_buffer_1.dir/tests.cpp.o
+.PHONY : tests.cpp.o
 
-circular_buffer.i: circular_buffer.cpp.i
-.PHONY : circular_buffer.i
-
-# target to preprocess a source file
-circular_buffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer.dir/build.make CMakeFiles/circular_buffer.dir/circular_buffer.cpp.i
-.PHONY : circular_buffer.cpp.i
-
-circular_buffer.s: circular_buffer.cpp.s
-.PHONY : circular_buffer.s
-
-# target to generate assembly for a file
-circular_buffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer.dir/build.make CMakeFiles/circular_buffer.dir/circular_buffer.cpp.s
-.PHONY : circular_buffer.cpp.s
-
-hello_test.o: hello_test.cc.o
-.PHONY : hello_test.o
-
-# target to build an object file
-hello_test.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/hello_test.cc.o
-.PHONY : hello_test.cc.o
-
-hello_test.i: hello_test.cc.i
-.PHONY : hello_test.i
+tests.i: tests.cpp.i
+.PHONY : tests.i
 
 # target to preprocess a source file
-hello_test.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/hello_test.cc.i
-.PHONY : hello_test.cc.i
+tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer_1.dir/build.make CMakeFiles/circular_buffer_1.dir/tests.cpp.i
+.PHONY : tests.cpp.i
 
-hello_test.s: hello_test.cc.s
-.PHONY : hello_test.s
+tests.s: tests.cpp.s
+.PHONY : tests.s
 
 # target to generate assembly for a file
-hello_test.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/hello_test.cc.s
-.PHONY : hello_test.cc.s
+tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/circular_buffer_1.dir/build.make CMakeFiles/circular_buffer_1.dir/tests.cpp.s
+.PHONY : tests.cpp.s
 
 # Help Target
 help:
@@ -724,18 +700,15 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
-	@echo "... circular_buffer"
+	@echo "... circular_buffer_1"
+	@echo "... circular_buffer_t"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... hello_test"
-	@echo "... circular_buffer.o"
-	@echo "... circular_buffer.i"
-	@echo "... circular_buffer.s"
-	@echo "... hello_test.o"
-	@echo "... hello_test.i"
-	@echo "... hello_test.s"
+	@echo "... tests.o"
+	@echo "... tests.i"
+	@echo "... tests.s"
 .PHONY : help
 
 

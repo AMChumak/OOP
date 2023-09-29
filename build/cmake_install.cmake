@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/anton/Документы/OOP/chumak_lab_1/build/_deps/googletest-build/cmake_install.cmake")
+  include("/home/anton/Документы/OOP/chumak_lab_1/build/circular_buffer/cmake_install.cmake")
 
 endif()
 

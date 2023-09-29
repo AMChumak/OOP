@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(circular_buffer VERSION 0.1.0 LANGUAGES C CXX)
+project(circular_buffer_1 VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
 enable_testing()
@@ -17,25 +17,21 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-  hello_test
-  hello_test.cc
+  circular_buffer_1
+  tests.cpp
 )
+
+add_subdirectory(circular_buffer)
+
+target_include_directories(circular_buffer_1 PRIVATE circular_buffer)
+
+
 target_link_libraries(
-  hello_test
+  circular_buffer_1 PRIVATE 
+  circular_buffer_t
   GTest::gtest_main
-  gtest
 )
 
 
-include(GoogleTest)
-gtest_discover_tests(hello_test)
 
 
-
-
-
-add_library(circular_buffer circular_buffer.cpp)
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
