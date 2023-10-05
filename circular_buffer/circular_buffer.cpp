@@ -58,13 +58,13 @@ buffer_[(firstIndex_ + i) % this->capacity_] = elem;
 // Доступ по индексу. Не проверяют правильность индекса.
 template <class ValueType>
 ValueType &CircularBuffer<ValueType>::operator[](int i) {
-ValueType &element = buffer_[firstIndex_ + i];
+ValueType &element = buffer_[(firstIndex_ + i)%capacity_];
 return element;
 }
 
 template <class ValueType>
 const ValueType &CircularBuffer<ValueType>::operator[](int i) const {
-    const ValueType &element = buffer_[firstIndex_ + i];
+    const ValueType &element = buffer_[(firstIndex_ + i)%capacity_];
     return element;
 }
 
@@ -72,7 +72,7 @@ const ValueType &CircularBuffer<ValueType>::operator[](int i) const {
 template <class ValueType>
 ValueType &CircularBuffer<ValueType>::at(int i) {
     try {
-        ValueType &element = buffer_[firstIndex_ + i];
+        ValueType &element = buffer_[(firstIndex_ + i)%capacity_];
         return element;
     } catch (const std::out_of_range &other) {
         throw other;
@@ -105,13 +105,13 @@ const ValueType &CircularBuffer<ValueType>::front() const {
 // Ссылка на последний элемент.
 template <class ValueType>
 ValueType &CircularBuffer<ValueType>::back() { 
-    ValueType &lastElement = buffer_[(firstIndex_ + size_) % capacity_];
+    ValueType &lastElement = buffer_[(firstIndex_ + size_-1) % capacity_];
     return lastElement;
 }
 
 template <class ValueType>
 const ValueType &CircularBuffer<ValueType>::back() const {
-    const ValueType &lastElement = buffer_[(firstIndex_ + size_) % capacity_];
+    const ValueType &lastElement = buffer_[(firstIndex_ + size_ - 1) % capacity_];
     return lastElement;
 }
 
@@ -128,6 +128,8 @@ ValueType *CircularBuffer<ValueType>::linearize() {
         for (int i = 0; i < size_; i++) {
           buffer_[i] = temporaryBuffer[i];
         }
+        firstIndex_ = 0;
+        delete [] temporaryBuffer;
     }
     return buffer_;
 }
@@ -149,8 +151,9 @@ void CircularBuffer<ValueType>::rotate(int new_begin) {
         temporaryBuffer[i] = buffer_[(firstIndex_ + i) % capacity_];
     }
     for (int i = 0; i < size_; i++) {
-        buffer_[(capacity_ - new_begin + i) % capacity_] = temporaryBuffer[i];
+        buffer_[(capacity_ +firstIndex_ + i) % capacity_] = temporaryBuffer[(new_begin + i)%size_];
     }
+    delete [] temporaryBuffer;
 }
 
 // Количество элементов, хранящихся в буфере.
@@ -181,11 +184,13 @@ int CircularBuffer<ValueType>::capacity() const {
 // установить ёмкость буффера
 template <class ValueType>
 void CircularBuffer<ValueType>::set_capacity(int new_capacity) {
+    if (capacity_ == new_capacity)
+        return;
     capacity_ = new_capacity;
-    if (capacity_ <= size_)
+    if (capacity_ <= size_){
         size_ = capacity_;
-
-    ValueType *newBuffer = new ValueType[size_];
+    }
+    ValueType *newBuffer = new ValueType[new_capacity];
 
     for (int i = 0; i < size_; i++) {
         newBuffer[i] = buffer_[(firstIndex_ + i) % capacity_];
@@ -212,7 +217,7 @@ void CircularBuffer<ValueType>::resize(int new_size, const ValueType &item) {
 // Оператор присваивания.
 template <class ValueType>
 CircularBuffer<ValueType> &CircularBuffer<ValueType>::operator=(const CircularBuffer<ValueType> &cb) {
-    delete[] buffer_;
+    //delete[] this->buffer_;
     buffer_ = new ValueType[cb.capacity_];
     capacity_ = cb.capacity_;
     firstIndex_ = cb.firstIndex_;
@@ -221,6 +226,7 @@ CircularBuffer<ValueType> &CircularBuffer<ValueType>::operator=(const CircularBu
         buffer_[(firstIndex_ + i) % capacity_] =
             cb.buffer_[(cb.firstIndex_ + i) % cb.capacity_];
     }
+    return *this;
 }
 
 // Обменивает содержимое буфера с буфером cb.
@@ -229,6 +235,12 @@ void CircularBuffer<ValueType>::swap(CircularBuffer &cb) {
     ValueType *temporaryBuffer = buffer_;
     buffer_ = cb.buffer_;
     cb.buffer_ = temporaryBuffer;
+    int temporaryCapacity = capacity_;
+    capacity_ = cb.capacity_;
+    cb.capacity_ = capacity_;
+    int temporarySize = size_;
+    size_ = cb.size_;
+    cb.size_ = temporarySize;
 }
 
 // Добавляет элемент в конец буфера.
@@ -240,8 +252,8 @@ void CircularBuffer<ValueType>::push_back(const ValueType &item) {
         buffer_[firstIndex_] = item;
         firstIndex_ = (firstIndex_ + 1) % capacity_;
     } else {
-        size_++;
         buffer_[firstIndex_ + size_] = item;
+        size_++;
     }
 }
 
@@ -284,6 +296,9 @@ void CircularBuffer<ValueType>::insert(int pos, const ValueType &item) {
 // Удаляет элементы из буфера в интервале [first, last).
 template <class ValueType>
 void CircularBuffer<ValueType>::erase(int first, int last) {
+    if (last > capacity_+1){
+        last = capacity_ + 1;
+    }
     for (int i = 0; i < capacity_ - last; i++) {
         buffer_[(firstIndex_ + first + i) % capacity_] =
             buffer_[(firstIndex_ + last + i) % capacity_];
@@ -316,3 +331,20 @@ bool operator!=(const CircularBuffer<X> &a, const CircularBuffer<X> &b) {
         return false;
     return true;
 }
+
+
+// block of instances
+// This code instance templates for it's usable 
+template class CircularBuffer<int>;
+template class CircularBuffer<char>;
+template class CircularBuffer<float>;
+template class CircularBuffer<double>;
+template class CircularBuffer<bool>;
+template class CircularBuffer<long>;
+template class CircularBuffer<long long>;
+template class CircularBuffer<long double>;
+
+template bool operator==
+    <int>(const CircularBuffer<int> &a, const CircularBuffer<int> &b);
+template bool operator!=
+    <int>(const CircularBuffer<int> &a, const CircularBuffer<int> &b);

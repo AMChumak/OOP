@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/anton/Документы/OOP/chumak_lab_1/CMakeLists.txt"
-  "CMakeFiles/3.27.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.27.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.27.4/CMakeSystem.cmake"
+  "CMakeFiles/3.27.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.27.6/CMakeSystem.cmake"
   "_deps/googletest-src/CMakeLists.txt"
   "_deps/googletest-src/googlemock/CMakeLists.txt"
   "_deps/googletest-src/googlemock/cmake/gmock.pc.in"
