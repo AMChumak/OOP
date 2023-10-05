@@ -1,6 +1,6 @@
 #include "circular_buffer.h"
 #include <iostream>
-#include <stdexcept>
+
 
 template <class ValueType>
 CircularBuffer<ValueType>::CircularBuffer() {
@@ -348,3 +348,8 @@ template bool operator==
     <int>(const CircularBuffer<int> &a, const CircularBuffer<int> &b);
 template bool operator!=
     <int>(const CircularBuffer<int> &a, const CircularBuffer<int> &b);
+
+template bool operator==
+    <double>(const CircularBuffer<double> &a, const CircularBuffer<double> &b);
+template bool operator!=
+    <double>(const CircularBuffer<double> &a, const CircularBuffer<double> &b);

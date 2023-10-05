@@ -29,9 +29,17 @@ protected:
     delete secondIntBuffer;
     delete thirdIntBuffer;
 
+    firstIntBuffer = nullptr;
+    secondIntBuffer = nullptr;
+    thirdIntBuffer = nullptr;
+
     delete firstDoubleBuffer;
     delete secondDoubleBuffer;
     delete thirdDoubleBuffer;
+
+    firstDoubleBuffer = nullptr;
+    secondDoubleBuffer = nullptr;
+    thirdDoubleBuffer = nullptr;
     }
 };
 } // namespace
