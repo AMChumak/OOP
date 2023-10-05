@@ -49,6 +49,12 @@ int main(int argc, char **argv)
     ifstream inputFileStream;
     inputFileStream.open(inputFile, fstream::in);
 
+    // checks existing file
+    if (!inputFileStream) {
+      printf("input file does not exist\n");
+      return 0;
+    }
+
     int totalWordCounter = 0;
     map<string, int> wordDictionary = {};
 
