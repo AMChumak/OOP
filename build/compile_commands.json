@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/anton/Документы/OOP/chumak_lab_0/build",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/introlab.dir/main.cpp.o -c /home/anton/Документы/OOP/chumak_lab_0/main.cpp",
-  "file": "/home/anton/Документы/OOP/chumak_lab_0/main.cpp",
-  "output": "CMakeFiles/introlab.dir/main.cpp.o"
-}
-]
