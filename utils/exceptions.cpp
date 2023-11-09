@@ -20,3 +20,28 @@ const char *GameRuleFormatFail::what() {
 const char *IncorrectFilePath::what() {
   return "Could not open a file with this path";
 }
+
+const char *IncorrectCommand::what() {
+  return "There is no command with defined name";
+}
+
+const char *FileExtensionFail::what() {
+  return "File extension is not .life nor .lif";
+}
+
+const char *IntArgumentAbsence::what() {
+  return "There should be an int type argument here";
+}
+
+const char *TooManyArguments::what() {
+  return "There are too many arguments in function calling";
+}
+
+const char *TooShortFileLength::what() {
+  return "The file is too short, so it does not contain the rules of the "
+         "universe";
+}
+
+const char *SameAliveCells::what() {
+  return "There are the same coordinates of alive cells in file";
+}

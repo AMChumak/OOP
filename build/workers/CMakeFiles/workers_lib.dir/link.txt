@@ -1,0 +1,2 @@
+/usr/bin/ar qc libworkers_lib.a CMakeFiles/workers_lib.dir/file_handler.cpp.o CMakeFiles/workers_lib.dir/helper.cpp.o CMakeFiles/workers_lib.dir/iterator.cpp.o CMakeFiles/workers_lib.dir/statistics.cpp.o
+/usr/bin/ranlib libworkers_lib.a

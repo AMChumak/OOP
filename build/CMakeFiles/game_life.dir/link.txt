@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/game_life.dir/life.cpp.o -o game_life  client/libgame_client_lib.a console_process_classes/libconsole_processors_lib.a game_space_classes/libgame_space_lib.a utils/libutils_lib.a workers/libworkers_lib.a 

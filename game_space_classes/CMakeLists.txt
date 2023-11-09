@@ -1,0 +1,1 @@
+add_library(game_space_lib field.cpp field.h universe.cpp universe.h)

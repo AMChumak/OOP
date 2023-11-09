@@ -1,0 +1,188 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "client",
+					"jsonFile" : "directory-client-Debug-eda4c8a4dacec2844350.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "client",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "console_process_classes",
+					"jsonFile" : "directory-console_process_classes-Debug-057968e0c5b8d066c68e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "console_process_classes",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "game_space_classes",
+					"jsonFile" : "directory-game_space_classes-Debug-69e006dafcef2d27083d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "game_space_classes",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "utils",
+					"jsonFile" : "directory-utils-Debug-ecc62ddb27eede1f7ffa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "utils",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "workers",
+					"jsonFile" : "directory-workers-Debug-b04ce98c7f9bce71fd6d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "workers",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "game_life",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "console_processors_lib::@8bdde99f2ccfcda21d64",
+					"jsonFile" : "target-console_processors_lib-Debug-e98feef2b8fcf5e4f1a6.json",
+					"name" : "console_processors_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "game_client_lib::@b0c487aac068df482bf0",
+					"jsonFile" : "target-game_client_lib-Debug-ab0634639fd703905855.json",
+					"name" : "game_client_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "game_life::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-game_life-Debug-a2b3bc6dc8e630854bab.json",
+					"name" : "game_life",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "game_space_lib::@58177b9e18f5e6f5223e",
+					"jsonFile" : "target-game_space_lib-Debug-b48fd6527d3db01a9680.json",
+					"name" : "game_space_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "utils_lib::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-utils_lib-Debug-f182ce6da5820e2d6e11.json",
+					"name" : "utils_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "workers_lib::@9f6a5b99b7af8ca92541",
+					"jsonFile" : "target-workers_lib-Debug-8a6feafe78934c2ce727.json",
+					"name" : "workers_lib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/anton/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/OOP/chumak_lab_2/build",
+		"source" : "/home/anton/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/OOP/chumak_lab_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -12,7 +12,7 @@ public:
   virtual void printInfo(string gameName, char **field, int height, int width,
                          set<int> birthRule, set<int> surviveRule) = 0;
   virtual void printRequest() = 0;
-  virtual void printError(exception gameException) = 0;
+  virtual void printError(exception &gameException) = 0;
   virtual void printHelp(ICommandSuggestion &hint) = 0;
 };
 

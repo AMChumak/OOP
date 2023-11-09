@@ -5,7 +5,7 @@ using namespace std;
 
 class ICommandSuggestion {
 public:
-  virtual const char *what() = 0;
+  const char *what() { return "exception"; }
 };
 
 #endif

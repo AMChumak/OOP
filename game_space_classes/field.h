@@ -9,6 +9,7 @@ private:
 
 public:
   Field();
+  Field(int height, int width);
   Field(int height, int width, int **data);
   Field(const Field &sample);
   ~Field();

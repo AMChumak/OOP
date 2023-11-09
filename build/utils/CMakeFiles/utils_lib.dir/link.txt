@@ -1,0 +1,2 @@
+/usr/bin/ar qc libutils_lib.a CMakeFiles/utils_lib.dir/exceptions.cpp.o CMakeFiles/utils_lib.dir/suggestions.cpp.o
+/usr/bin/ranlib libutils_lib.a

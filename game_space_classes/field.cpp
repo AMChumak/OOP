@@ -13,6 +13,18 @@ Field::Field() {
   }
 }
 
+Field::Field(int height, int width) {
+  cells_ = new char *[height];
+  for (int i = 0; i < height; i++) {
+    cells_[i] = new char[width];
+    for (int j = 0; j < width; j++) {
+      cells_[i][j] = 0;
+    }
+  }
+  height_ = height;
+  width_ = width;
+}
+
 Field::Field(int height, int width, int **data) {
   cells_ = new char *[height];
   for (int i = 0; i < height; i++) {

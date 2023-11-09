@@ -15,8 +15,9 @@ private:
 
 public:
   FileHandler(Field *gameField, Universe *gameUniverse);
-  void saveStateAndRules(string outputFile);
-  void initializeStateAndRules(string inputFile);
+  void saveStateAndRules(string outputFile, IOutputCompiler *outputCompiler);
+  void initializeStateAndRules(string inputFile,
+                               IOutputCompiler *outputCompiler);
 };
 
 #endif

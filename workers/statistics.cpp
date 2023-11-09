@@ -1,4 +1,4 @@
-#include "statistic.h"
+#include "statistics.h"
 
 Statistics::Statistics(Field *newField, Universe *newUniverse) {
   gameField_ = newField;
@@ -15,7 +15,8 @@ void Statistics::putInfo(IOutputCompiler *outputCompiler) {
       lifeField[i][j] = gameField_->at(i, j);
     }
   }
-  outputCompiler->printInfo(gameUniverse_->getName(), lifeField, fieldHeight,
-                            fieldWidth, gameUniverse_->getBirthRule(),
-                            gameUniverse_->getSurviveRule());
+  outputCompiler->printInfo(gameUniverse_->Universe::getName(), lifeField,
+                            fieldHeight, fieldWidth,
+                            gameUniverse_->Universe::getBirthRule(),
+                            gameUniverse_->Universe::getSurviveRule());
 }

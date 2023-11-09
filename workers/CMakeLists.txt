@@ -1,0 +1,1 @@
+add_library(workers_lib file_handler.cpp file_handler.h helper.cpp helper.h i_initialize_info.h i_save_info.h iterator.cpp iterator.h statistics.cpp statistics.h)

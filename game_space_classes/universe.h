@@ -12,6 +12,7 @@ private:
   set<int> surviveRule_;
 
 public:
+  Universe();
   void setName(string universeName);
   string getName() const;
   void setBirthRule(set<int> newBirthRule);

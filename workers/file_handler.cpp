@@ -4,6 +4,7 @@
 #include <cctype>
 #include <exception>
 #include <fstream>
+#include <memory>
 #include <string>
 #include <type_traits>
 #include <vector>
@@ -95,21 +96,23 @@ FileHandler::FileHandler(Field *gameField, Universe *gameUniverse) {
   gameUniverse_ = gameUniverse;
 }
 
-void FileHandler::initializeStateAndRules(string inputFile) {
+void FileHandler::initializeStateAndRules(string inputFile,
+                                          IOutputCompiler *outputCompiler) {
   ifstream inputFileStream;
-  int minimalFirstIndex;
-  int minimalSecondIndex;
+  int minimalFirstIndex = 0, minimalSecondIndex = 0, maximumFirstIndex = 0,
+      maximumSecondIndex = 0;
 
   string gameName;
   set<int> birthRule = {};
   set<int> surviveRule = {};
 
-  vector<int[2]> aliveCells;
+  vector<shared_ptr<int[2]>> aliveCells;
   int currentPair[2] = {0, 0};
   inputFileStream.open(inputFile, fstream::in);
   if (!inputFileStream) {
     inputFileStream.close();
-    // вывод ошибки отсутствия файла
+    IncorrectFilePath exceptionIncorrectPath;
+    outputCompiler->printError(exceptionIncorrectPath);
     return;
   }
 
@@ -117,34 +120,35 @@ void FileHandler::initializeStateAndRules(string inputFile) {
     checkTitle(&inputFileStream);
   } catch (FileFormatFail &exception) {
     inputFileStream.close();
-    // вывод текста ошибки
+    outputCompiler->printError(exception);
     return;
   }
 
   try {
     getName(&inputFileStream);
   } catch (GameNameAbsence &exception) {
-    // вывод ошибки
+    outputCompiler->printError(exception);
     gameUniverse_->setName("GameLife");
   }
 
   if (!inputFileStream) {
     inputFileStream.close();
-    // вывод ошибки длины файла
+    TooShortFileLength exceptionShortFile;
+    outputCompiler->printError(exceptionShortFile);
     return;
   }
 
   try {
     getRules(&inputFileStream, &birthRule, &surviveRule);
-    gameUniverse_->setBirthRule(birthRule);
-    gameUniverse_->setSurviveRule(surviveRule);
+    gameUniverse_->Universe::setBirthRule(birthRule);
+    gameUniverse_->Universe::setSurviveRule(surviveRule);
   } catch (GameRuleAbsence &exception) {
     inputFileStream.close();
-    // вывод ошибки
+    outputCompiler->printError(exception);
     return;
   } catch (GameRuleFormatFail &exception) {
     inputFileStream.close();
-    // вывод ошибки
+    outputCompiler->printError(exception);
     return;
   }
 
@@ -157,52 +161,72 @@ void FileHandler::initializeStateAndRules(string inputFile) {
       if (minimalSecondIndex > currentPair[1]) {
         minimalSecondIndex = currentPair[1];
       }
+      if (maximumFirstIndex < currentPair[0]) {
+        maximumFirstIndex = currentPair[0];
+      }
+      if (maximumSecondIndex < currentPair[1]) {
+        maximumSecondIndex = currentPair[1];
+      }
+
       int samePairsCounter = 0;
-      for (vector<int[2]>::iterator it = aliveCells.begin();
+      for (vector<shared_ptr<int[2]>>::iterator it = aliveCells.begin();
            it != aliveCells.end(); it++) {
         if ((*it)[0] == currentPair[0] && (*it)[1] == currentPair[1]) {
-          // выводим ошибку о совпадениях
+          SameAliveCells exceptionSameCells;
+          outputCompiler->printError(exceptionSameCells);
           samePairsCounter++;
         }
       }
       if (samePairsCounter == 0) {
-        aliveCells.push_back({currentPair[0], currentPair[1]});
+        shared_ptr<int[2]> coords = shared_ptr<int[2]>(new int[2]);
+        coords.get()[0] = currentPair[0];
+        coords.get()[1] = currentPair[1];
+        aliveCells.push_back(coords);
       }
 
-      for (vector<int[2]>::iterator it = aliveCells.begin();
-           it != aliveCells.end(); it++) {
-        gameField_->at((*it)[0] + minimalFirstIndex,
-                       (*it)[1] + minimalSecondIndex) = 1;
-      }
     } catch (FileFormatFail &exception) {
       inputFileStream.close();
-      // вывод ошибки
+      outputCompiler->printError(exception);
       return;
     }
   }
+  unique_ptr<Field> initField =
+      make_unique<Field>(maximumFirstIndex - minimalFirstIndex + 100,
+                         maximumSecondIndex - minimalSecondIndex + 100);
+  for (vector<shared_ptr<int[2]>>::iterator it = aliveCells.begin();
+       it != aliveCells.end(); it++) {
+    initField->at((*it)[0] + minimalFirstIndex, (*it)[1] + minimalSecondIndex) =
+        1;
+  }
+  (*gameField_) = (*initField);
 
   inputFileStream.close();
 }
 
-void FileHandler::saveStateAndRules(string outputFile) {
+void FileHandler::saveStateAndRules(string outputFile,
+                                    IOutputCompiler *outputCompiler) {
   ofstream outputFileStream;
+  if (outputFile == "") {
+    outputFile = "outputUniverse.life";
+  }
   outputFileStream.open(outputFile, fstream::out);
   if (!outputFileStream) {
     outputFileStream.close();
-    // вывод ошибки отсутствия файла
+    IncorrectFilePath exceptionIncorrectPath;
+    outputCompiler->printError(exceptionIncorrectPath);
     return;
   }
   outputFileStream << "#Life 1.06\n";
 
-  outputFileStream << "#N " << gameUniverse_->getName() << "\n";
+  outputFileStream << "#N " << gameUniverse_->Universe::getName() << "\n";
 
   outputFileStream << "#R B";
-  set<int> rule = gameUniverse_->getBirthRule();
+  set<int> rule = gameUniverse_->Universe::getBirthRule();
   for (set<int>::iterator it = rule.begin(); it != rule.end(); it++) {
     outputFileStream << *it;
   }
   outputFileStream << "/S";
-  rule = gameUniverse_->getSurviveRule();
+  rule = gameUniverse_->Universe::getSurviveRule();
   for (set<int>::iterator it = rule.begin(); it != rule.end(); it++) {
     outputFileStream << *it;
   }

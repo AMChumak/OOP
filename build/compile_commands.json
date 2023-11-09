@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build",
+  "command": "/usr/bin/g++  -I/home/anton/Документы/OOP/chumak_lab_2/client -I/home/anton/Документы/OOP/chumak_lab_2/console_process_classes -I/home/anton/Документы/OOP/chumak_lab_2/game_space_classes -I/home/anton/Документы/OOP/chumak_lab_2/utils -I/home/anton/Документы/OOP/chumak_lab_2/workers -g -std=gnu++14 -o CMakeFiles/game_life.dir/life.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/life.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/life.cpp",
+  "output": "CMakeFiles/game_life.dir/life.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/client",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/game_client_lib.dir/client.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/client/client.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/client/client.cpp",
+  "output": "client/CMakeFiles/game_client_lib.dir/client.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/console_process_classes",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/console_processors_lib.dir/console_input_processor.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/console_process_classes/console_input_processor.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/console_process_classes/console_input_processor.cpp",
+  "output": "console_process_classes/CMakeFiles/console_processors_lib.dir/console_input_processor.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/console_process_classes",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/console_processors_lib.dir/console_output_compiler.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/console_process_classes/console_output_compiler.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/console_process_classes/console_output_compiler.cpp",
+  "output": "console_process_classes/CMakeFiles/console_processors_lib.dir/console_output_compiler.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/game_space_classes",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/game_space_lib.dir/field.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/game_space_classes/field.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/game_space_classes/field.cpp",
+  "output": "game_space_classes/CMakeFiles/game_space_lib.dir/field.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/game_space_classes",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/game_space_lib.dir/universe.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/game_space_classes/universe.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/game_space_classes/universe.cpp",
+  "output": "game_space_classes/CMakeFiles/game_space_lib.dir/universe.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/utils",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/utils_lib.dir/exceptions.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/utils/exceptions.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/utils/exceptions.cpp",
+  "output": "utils/CMakeFiles/utils_lib.dir/exceptions.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/utils",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/utils_lib.dir/suggestions.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/utils/suggestions.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/utils/suggestions.cpp",
+  "output": "utils/CMakeFiles/utils_lib.dir/suggestions.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/workers",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/workers_lib.dir/file_handler.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/workers/file_handler.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/workers/file_handler.cpp",
+  "output": "workers/CMakeFiles/workers_lib.dir/file_handler.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/workers",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/workers_lib.dir/helper.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/workers/helper.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/workers/helper.cpp",
+  "output": "workers/CMakeFiles/workers_lib.dir/helper.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/workers",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/workers_lib.dir/iterator.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/workers/iterator.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/workers/iterator.cpp",
+  "output": "workers/CMakeFiles/workers_lib.dir/iterator.cpp.o"
+},
+{
+  "directory": "/home/anton/Документы/OOP/chumak_lab_2/build/workers",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/workers_lib.dir/statistics.cpp.o -c /home/anton/Документы/OOP/chumak_lab_2/workers/statistics.cpp",
+  "file": "/home/anton/Документы/OOP/chumak_lab_2/workers/statistics.cpp",
+  "output": "workers/CMakeFiles/workers_lib.dir/statistics.cpp.o"
+}
+]

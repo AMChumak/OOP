@@ -13,7 +13,8 @@ const char *TickCommandSuggestion::what() {
 }
 
 const char *DumpCommandSuggestion::what() {
-  return "Use command \"dump <filename>\" where filename - name of file, which "
+  return "Use command \"dump <filename>\" where filename - name of file with "
+         "extension .life or .lif, which "
          "will be used for universe saving.\nIf file with this name doesn't "
          "exist, universe will be saved in file outputUniverse.life";
 }
@@ -24,11 +25,12 @@ const char *ExitCommandSuggestion::what() {
 
 const char *HelpCommandSuggestion::what() {
   return "Use command \"help <command>\" where command - one of game "
-         "commands.\nSet this field empty if you want see whole list";
+         "commands.\nSet this field empty if you want to see the whole list";
 }
 
 const char *InitializeCommandSuggestion::what() {
-  return "Use file format Life 1.06:\nIn the first string write #Life 1.06\nIn "
+  return "Use file format Life 1.06:\nFile must has extension .life or .lif\n "
+         "In the first string write #Life 1.06\nIn "
          "the second string write #B<n>/S<m> where n,m - count of neighbours "
          "neccessaries for birth and survival\nIn the next string whrite x y "
          "where (x,y) - coordinates of alive cells";

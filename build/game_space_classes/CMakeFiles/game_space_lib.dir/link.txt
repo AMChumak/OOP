@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgame_space_lib.a CMakeFiles/game_space_lib.dir/field.cpp.o CMakeFiles/game_space_lib.dir/universe.cpp.o
+/usr/bin/ranlib libgame_space_lib.a

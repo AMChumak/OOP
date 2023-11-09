@@ -7,32 +7,37 @@ using namespace std;
 
 class CommandListSuggestion : public ICommandSuggestion {
 public:
-  const char *what() override;
+  CommandListSuggestion() {}
+  const char *what();
 };
-
 class TickCommandSuggestion : public ICommandSuggestion {
 public:
-  const char *what() override;
+  TickCommandSuggestion() {}
+  const char *what();
 };
 
 class DumpCommandSuggestion : public ICommandSuggestion {
 public:
-  const char *what() override;
+  DumpCommandSuggestion() {}
+  const char *what();
 };
 
 class ExitCommandSuggestion : public ICommandSuggestion {
 public:
-  const char *what() override;
+  ExitCommandSuggestion() {}
+  const char *what();
 };
 
 class HelpCommandSuggestion : public ICommandSuggestion {
 public:
-  const char *what() override;
+  HelpCommandSuggestion() {}
+  const char *what();
 };
 
 class InitializeCommandSuggestion : public ICommandSuggestion {
 public:
-  const char *what() override;
+  InitializeCommandSuggestion() {}
+  const char *what();
 };
 
 #endif

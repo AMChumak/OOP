@@ -1,0 +1,1 @@
+add_library(utils_lib exceptions.cpp exceptions.h game_commands.h parse_answer_struct.h suggestions.cpp suggestions.h i_suggestion.h)

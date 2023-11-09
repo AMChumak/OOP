@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconsole_processors_lib.a CMakeFiles/console_processors_lib.dir/console_input_processor.cpp.o CMakeFiles/console_processors_lib.dir/console_output_compiler.cpp.o
+/usr/bin/ranlib libconsole_processors_lib.a

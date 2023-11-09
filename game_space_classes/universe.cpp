@@ -4,6 +4,12 @@
 
 using namespace std;
 
+Universe::Universe() {
+  name_ = "GameLife";
+  birthRule_ = {3};
+  surviveRule_ = {2, 3};
+}
+
 void Universe::setName(string universeName) { name_ = universeName; }
 
 string Universe::getName() const { return name_; }

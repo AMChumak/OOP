@@ -5,27 +5,57 @@
 
 using namespace std;
 
-class GameNameAbsence : exception {
+class GameNameAbsence : public exception {
 public:
   const char *what();
 };
 
-class FileFormatFail : exception {
+class FileFormatFail : public exception {
 public:
   const char *what();
 };
 
-class GameRuleAbsence : exception {
+class GameRuleAbsence : public exception {
 public:
   const char *what();
 };
 
-class GameRuleFormatFail : exception {
+class GameRuleFormatFail : public exception {
 public:
   const char *what();
 };
 
-class IncorrectFilePath : exception {
+class IncorrectFilePath : public exception {
+public:
+  const char *what();
+};
+
+class IncorrectCommand : public exception {
+public:
+  const char *what();
+};
+
+class FileExtensionFail : public exception {
+public:
+  const char *what();
+};
+
+class IntArgumentAbsence : public exception {
+public:
+  const char *what();
+};
+
+class TooManyArguments : public exception {
+public:
+  const char *what();
+};
+
+class TooShortFileLength : public exception {
+public:
+  const char *what();
+};
+
+class SameAliveCells : public exception {
 public:
   const char *what();
 };

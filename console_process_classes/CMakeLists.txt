@@ -1,0 +1,1 @@
+add_library(console_processors_lib console_input_processor.cpp console_input_processor.h console_output_compiler.cpp console_output_compiler.h i_input_processor.h i_output_compiler.h)

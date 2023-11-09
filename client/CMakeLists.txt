@@ -1,0 +1,1 @@
+add_library(game_client_lib client.cpp client.h i_execute.h i_request.h)
